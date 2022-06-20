@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>VanillaJS • TodoMVC</title>
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/list.css">
+</head>
+
+<body>
+<main>
+    <header>
+        <h1>todos</h1>
+    </header>
+    <section>
+        <div class="input-group">
+            <input id="check-all" class="check-all" type="checkbox">
+            <label for="check-all" class="check-all-label">V</label>
+            <input class="todo-input" placeholder="What needs to be done?" autofocus="">
+        </div>
+        <ul class="item-list">
+            <li data-id="1654677224292" class="item-group">
+                <input id="check-1654677224292" class="check-item" type="checkbox">
+                <label for="check-1654677224292" class="check-item-label"></label>
+                <p class="item-text">toto</p>
+                <button class="item-delete-btn"></button>
+            </li>
+            <li data-id="1654677225387" class="item-group">
+                <input id="check-1654677225387" class="check-item" type="checkbox">
+                <label for="check-1654677225387" class="check-item-label"></label>
+                <p class="item-text">toto</p>
+                <button class="item-delete-btn"></button>
+            </li>
+            <li data-id="1654677226298" class="item-group">
+                <input id="check-1654677226298" class="check-item" type="checkbox">
+                <label for="check-1654677226298" class="check-item-label"></label>
+                <p class="item-text">toto</p>
+                <button class="item-delete-btn"></button>
+            </li>
+        </ul>
+        <footer class="footer">
+            <span class="todo-count"><strong>10</strong> items left</span>
+            <ul class="filters">
+                <li>
+                    <a href="#/" class="selected">All</a>
+                </li>
+                <li>
+                    <a href="#/active">Active</a>
+                </li>
+                <li>
+                    <a href="#/completed">Completed</a>
+                </li>
+            </ul>
+            <button class="clear-completed" style="display: none;"></button>
+        </footer>
+    </section>
+    <div class="footer-after-1"></div>
+    <div class="footer-after-2"></div>
+</main>
+
+<script src="./assets/js/app.js"></script>
+
+</body>
+</html>
