@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/list.css">
+    <link rel="stylesheet" href="./assets/css/list.css">
 </head>
 
 <body>
@@ -17,43 +17,21 @@
     <section>
         <div class="input-group">
             <input id="check-all" class="check-all" type="checkbox">
-            <label for="check-all" class="check-all-label">V</label>
-            <input class="todo-input" placeholder="What needs to be done?" autofocus="">
+            <label id="check-all-label" for="check-all" class="check-all-label">V</label>
+            <input id="todo-input" class="todo-input" placeholder="What needs to be done?" autofocus>
         </div>
-        <ul class="item-list">
-            <li data-id="1654677224292" class="item-group">
-                <input id="check-1654677224292" class="check-item" type="checkbox">
-                <label for="check-1654677224292" class="check-item-label"></label>
-                <p class="item-text">toto</p>
-                <button class="item-delete-btn"></button>
-            </li>
-            <li data-id="1654677225387" class="item-group">
-                <input id="check-1654677225387" class="check-item" type="checkbox">
-                <label for="check-1654677225387" class="check-item-label"></label>
-                <p class="item-text">toto</p>
-                <button class="item-delete-btn"></button>
-            </li>
-            <li data-id="1654677226298" class="item-group">
-                <input id="check-1654677226298" class="check-item" type="checkbox">
-                <label for="check-1654677226298" class="check-item-label"></label>
-                <p class="item-text">toto</p>
-                <button class="item-delete-btn"></button>
-            </li>
+        <ul id="item-list" class="item-list">
         </ul>
         <footer class="footer">
-            <span class="todo-count"><strong>10</strong> items left</span>
+            <p id="todo-count" class="todo-count"></p>
             <ul class="filters">
-                <li>
-                    <a href="#/" class="selected">All</a>
-                </li>
-                <li>
-                    <a href="#/active">Active</a>
-                </li>
-                <li>
-                    <a href="#/completed">Completed</a>
-                </li>
+                <li class="filter selected" data-mode="all">All</li>
+                <li class="filter" data-mode="active">Active</li>
+                <li class="filter" data-mode="completed">Completed</li>
             </ul>
-            <button class="clear-completed" style="display: none;"></button>
+            <div id="clear-completed" class="clear-completed">
+                <button id="clear-completed-btn" class="clear-completed-btn">Clear completed</button>
+            </div>
         </footer>
     </section>
     <div class="footer-after-1"></div>
@@ -61,6 +39,7 @@
 </main>
 
 <script src="./assets/js/app.js"></script>
+<script src="./assets/js/itemModel.js"></script>
 
 </body>
 </html>
